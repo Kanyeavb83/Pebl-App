@@ -12,11 +12,33 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Onboarding" screenOptions={{ headerStyle: { backgroundColor: '#121212' }, headerTintColor: '#FFFFFF' }}>
-        <Stack.Screen name="Onboarding" component={OnboardingScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="PondSelection" component={PondSelectionScreen} options={{ title: 'Choose Your Pond' }} />
-        <Stack.Screen name="RecordPebl" component={RecordPeblScreen} options={{ title: 'Record Your Pebl' }} />
-        <Stack.Screen name="Inbox" component={InboxScreen} options={{ title: 'Your Ripple Inbox' }} />
+      <Stack.Navigator
+        initialRouteName="Onboarding"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#121212' },
+          headerTintColor: '#FFFFFF'
+        }}
+      >
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PondSelection"
+          component={PondSelectionScreen}
+          options={{ title: 'Choose Your Pond' }}
+        />
+        <Stack.Screen
+          name="RecordPebl"
+          component={RecordPeblScreen}
+          options={{ title: 'Record Your Pebl' }}
+        />
+        <Stack.Screen
+          name="Inbox"
+          component={InboxScreen}
+          options={{ title: 'Your Ripple Inbox' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
