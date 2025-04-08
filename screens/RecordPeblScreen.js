@@ -10,14 +10,15 @@ const RecordPeblScreen = ({ route, navigation }) => {
   const [timer, setTimer] = useState(0);
   const timerRef = useRef(null);
 
-  useEffect(() => {
-    return () => {
-      if (recording) {
-        recording.stopAndUnloadAsync();
-      }
-      clearInterval(timerRef.current);
-    };
-  }, []);
+useEffect(() => {
+  return () => {
+    if (recording) {
+      recording.stopAndUnloadAsync();
+    }
+    clearInterval(timerRef.current);
+  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   const startRecording = async () => {
     try {
